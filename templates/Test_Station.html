@@ -6,13 +6,14 @@
 
     <title>Test_Station</title>
 
-    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='MobileApp.css') }}">
+   {%  load staticfiles %}
+	<link rel="stylesheet" href="{% static 'mobileapp/css/MobileApp.css' %}">
 </head>
 
 
 <div id="back">
 
-<a class="mybutton" href="/home">Back</a>
+<a class="mybutton" href="http://127.0.0.1:8000/mobileapp/">Back</a>
     <br/>
     <br/>
 
