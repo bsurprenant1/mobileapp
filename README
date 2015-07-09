@@ -1,0 +1,149 @@
+Welcome to the ATG Dashboard documentation.
+Author: David Geene
+Date: 2/19/2015
+Please feel free to contribute to this page.
+
+
+
+
+Setup and Pre-requisites
+=============================
+
+If you are going to be developing this project then read on. If you're just looking to deploy this project
+to a server then skip to the Deployment section.
+
+You should have some knowledge of the following topics. You do not have to be a rockstar at each one
+but having some familiarity with each can really help.
+
+Django
+https://www.djangoproject.com/start/
+
+Http Request Methods and query parameters - The main ones are GET, POST
+https://developer.mozilla.org/en-US/docs/Web/HTTP
+
+Html, CSS, and JavaScript
+
+Databases and Structured Query Language
+
+
+
+
+Python packages used
+-----------------------
+Django 1.8
+requests
+MySQL-python
+jira
+
+
+
+
+Technologies Used
+=================
+
+Django 1.8
+--------------
+https://docs.djangoproject.com/en/1.8/
+
+
+Twitter Bootstrap 3.3.2
+------------------------
+http://getbootstrap.com/
+Bootstrap is a web framework that helps speed up content layout and styling. It helps you get content on the page without
+having to write a lot of CSS boilerplate to just get your ideas on the page and looking alright. Bootstrap uses
+html <divs> with classes such as containers, rows, and columns to create the concept of a grid system.
+
+
+
+
+
+Project Folder Structure
+========================
+
+Examples/
+Contains ma_testcase.py which is a python decorator that will help your test scripts to post data to the server.
+NOTE!!!!: the dashboard interface class has moved to the AutomationUtils common subdirectory. Please make changes there
+and do not make any changes here. See https://svn.bose.com/hepd/common/trunk/ATG/AutomationUtils for the new home.
+
+common-static/
+This folder is for static resources such as scripts and css that can be shared between apps.
+Libraries can be put here such as jQuery, js charting libraries, and twitter bootstrap.
+- main.js can be for scripts that will be loaded on every page.
+- settings.js is an object that can store things that need to be available on every page and
+  would be a pain to change on every script on every page.
+For example, it stores the base url for the site for ajax requests. We now only have to change that URL in one place.
+Both of main.js and settings.js are loaded on the base.html template in templates/base.html
+
+mysite/
+This is the project directory. It contains django's main settings as well as the main url routes for apps.
+
+
+templates/
+This contains the base template for other apps' templates to inherit.
+The site navigation is contained here as well as css and scripts that should be loaded on each page.
+Not to be confused with each apps individual templates/ folder
+
+Django Applications:
+atg_general/
+    For pass fail test data. This application spans many products.
+
+software_team/
+    For displaying an organizational chart depicting members that are part of a team and the group that they work with.
+
+memtest/
+sente/
+vtuner/
+
+
+
+
+
+
+Django Templating
+======================
+The dashboard site will have an overall look. This uniform look is achieved through template inheritance.
+https://docs.djangoproject.com/en/1.7/topics/templates/#template-inheritance
+The base.html template assists in this look.
+
+Notable base.html template tags:
+
+{% block styles %} - Styles from a specific app template will be loaded here after the main sitewide style.
+
+{% block nav %} - Site navigation in the form of an unordered list, <ul>. Each list element <li>, contains its own
+block named nav-<app-name> within the <li> tag. This is for inserting a css class attribute that lets the navigation know
+which page the user is currently on.
+
+{% block content %} - Tha main outlet for an apps child template to output html on the page.
+
+{% block scripts %} - An apps child template can load additional scripts here. Note that it is important to have this
+block after the base template has loaded its scripts such as jquery. The browser loads each script in the order they were placed
+so if a script requires jQuery and is loaded before jQuery, an error will occur.
+-----
+
+
+
+
+
+
+
+Django App Layout
+====================
+
+This layout only applies to atg_general, memtest, and software_team for now as those apps I have made heavy modifications to.
+
+<app-name>/templates/<app-name>/
+Child templates will go here. It is important to have the templates within a subfolder that is the apps name as it helps
+Django determine which template to serve. There could be multiple apps with an index.html template.
+
+<app-name>/static/<app-name>/
+Files specific to that app will go here. This can be javascript, css, or images. Again, it is important to have the files
+contained within a subfolder named after the app for the same reasons above. Also, when the project is deployed a new folder
+is created called 'static' which will be used to serve all the sites static files. Within the static folder there will
+be subfolders named after each app as well as the common-static folder.
+
+
+
+Deployment
+======================
+
+TODO
