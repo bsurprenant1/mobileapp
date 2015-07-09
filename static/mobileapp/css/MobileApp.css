@@ -1,0 +1,41 @@
+body {
+	background-color:lightgrey;
+	border:10px solid black;
+	margin;10px;
+	padding:10px;
+}
+
+/* Specific Button layout generated Online */
+
+.mybutton {
+  background: #030c12;
+  background-image: -webkit-linear-gradient(top, #030c12, #259ce6);
+  background-image: -moz-linear-gradient(top, #030c12, #259ce6);
+  background-image: -ms-linear-gradient(top, #030c12, #259ce6);
+  background-image: -o-linear-gradient(top, #030c12, #259ce6);
+  background-image: linear-gradient(to bottom, #030c12, #259ce6);
+  -webkit-border-radius: 30;
+  -moz-border-radius: 30;
+  border-radius: 30px;
+  font-family: Arial;
+  color: #f7f7f7;
+  font-size: 27px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.mybutton:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+
+#back {
+	text-align:center;
+	padding:25px;
+
+}

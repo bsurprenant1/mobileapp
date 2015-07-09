@@ -1,0 +1,44 @@
+<!Doctype>
+<html>
+<head>
+
+<title> MobileApp </title>
+	{%  load staticfiles %}
+	<link rel="stylesheet" href="{% static 'mobileapp/css/MobileApp.css' %}">
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+</head>
+
+<body>
+<h1 align="center"> Bose Corp </h1>
+
+<!-- Need a specific Username and Password to access app -->
+
+
+<div align="center">
+<Form action="" method="post">
+	<input type="text" name="username" placeholder="Username" value="{{request.form.username }}"> </input>
+<br>
+<br>
+	<input type="password" name="password" placeholder="Password" value="{{request.form.password }}"> </input>
+<br>
+<br>
+	{%if error %}
+	   <p class'error'><strong>Error:</strong>{{ error }}
+	{% endif %}
+<br>
+<!--Input Type="submit" Value="Sign In" -->
+	<a class="submit" href="http://127.0.0.1:8000/mobileapp/">Mobile Home</a>
+</Form>
+</div>
+
+<br>
+
+<p align="center"> Mobile Audio Testing </p>
+
+ 
+
+
+</body>
+</html>
