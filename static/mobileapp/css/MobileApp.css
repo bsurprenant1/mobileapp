@@ -1,26 +1,88 @@
-body {
-	background-color:lightgrey;
-	border:10px solid black;
-	margin;10px;
-	padding:10px;
+.mybutton {
+  background: #f2eff2;
+  background-image: -webkit-linear-gradient(top, #f2eff2, #080808);
+  background-image: -moz-linear-gradient(top, #f2eff2, #080808);
+  background-image: -ms-linear-gradient(top, #f2eff2, #080808);
+  background-image: -o-linear-gradient(top, #f2eff2, #080808);
+  background-image: linear-gradient(to bottom, #f2eff2, #080808);
+  -webkit-border-radius: 90;
+  -moz-border-radius: 90;
+  border-radius: 900px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 50px;
+  padding: 30px 40px 30px 40px;
+  text-decoration: none;
+}
+
+.mybutton:hover {
+  background: #070808;
+  background-image: -webkit-linear-gradient(top, #070808, #ebf1f5);
+  background-image: -moz-linear-gradient(top, #070808, #ebf1f5);
+  background-image: -ms-linear-gradient(top, #070808, #ebf1f5);
+  background-image: -o-linear-gradient(top, #070808, #ebf1f5);
+  background-image: linear-gradient(to bottom, #070808, #ebf1f5);
+  text-decoration: none;
 }
 
 /* Specific Button layout generated Online */
 
-.mybutton {
+
+
+#back {
+	text-align:center;
+	padding:25px;
+
+}
+
+@media only screen and (max-device-width: 100px) {
+  width:100px;
+  margin:auto;
+  top:30%;
+  left:50%;
+  width:30em;
+  height:18em;
+  margin-top: -9em;
+  margin-left: -15em;
+
+}
+
+html {
+background: url(http://www.wallscorner.com/walls/bose-logo-wide.jpg) no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+top:50%;
+}
+
+#buttons {
+  margin:auto;
+  position:absolute;
+  top:47%;
+  left:50%;
+  width:30em;
+  height:18em;
+  margin-top: -9em;
+  margin-left: -15em;
+
+}
+
+
+/*.mybutton {
   background: #030c12;
   background-image: -webkit-linear-gradient(top, #030c12, #259ce6);
   background-image: -moz-linear-gradient(top, #030c12, #259ce6);
   background-image: -ms-linear-gradient(top, #030c12, #259ce6);
   background-image: -o-linear-gradient(top, #030c12, #259ce6);
   background-image: linear-gradient(to bottom, #030c12, #259ce6);
-  -webkit-border-radius: 30;
-  -moz-border-radius: 30;
-  border-radius: 30px;
+  -webkit-border-radius: 60;
+  -moz-border-radius: 60;
+  border-radius: 60px;
   font-family: Arial;
   color: #f7f7f7;
-  font-size: 27px;
-  padding: 10px 20px 10px 20px;
+  font-size: 54px;
+  padding: 25px 35px 20px 30px;
   text-decoration: none;
 }
 
@@ -32,10 +94,4 @@ body {
   background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
   background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
   text-decoration: none;
-}
-
-#back {
-	text-align:center;
-	padding:25px;
-
-}
+} */
