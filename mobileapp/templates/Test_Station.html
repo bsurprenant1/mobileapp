@@ -6,20 +6,56 @@
 
     <title>Test_Station</title>
 
-    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='MobileApp.css') }}">
+   {%  load staticfiles %}
+	<link rel="stylesheet" href="{% static 'mobileapp/css/MobileApp.css' %}">
 </head>
 
 
 <div id="back">
 
-<a class="mybutton" href="/home">Back</a>
+<a class="mybutton" href="http://127.0.0.1:8000/mobileapp/">Back</a>
     <br/>
     <br/>
 
     <h1><b>Select the Test Station</b></h1>
 </div>
+<head>
+<script>
+function showStation(str) {
+    if (str == "") {
+        document.getElementById("txtHint").innerHTML = "";
+        return;
+    } else {
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                document.getElementById("txtHint").innerHTML = xmlhttp.responseText;
+            }
+        }
+        xmlhttp.open("GET","get_testdata.php?q="+str,true);
+        xmlhttp.send();
+    }
+}
+</script>
+</head>
+<body>
 
-<!--- find way to put test stations here from dashboard -->
+<form>
+<select name="test_run" onchange="showStation(this.value)">
+  <option value="">Select a station:</option>
+  <option value="1">Hello_World</option>
+  <option value="2">Hello_people</option>
+  </select>
+</form>
+<br>
+<div id="txtHint"><b>Info will be here</b></div>
+
+</body>
+</html>
 
 
 </body>

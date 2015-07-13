@@ -18,4 +18,9 @@ class MobileSignout_View(View):
         t = loader.get_template('SignIn.html')
         return HttpResponse(t.render())
 
+class MobileStations_View(View):
+    def get(self, request, *args, **kwargs):
+        t = loader.get_template('Test_Station.html')
+        return HttpResponse(t.render())
+
 
