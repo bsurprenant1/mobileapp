@@ -5,6 +5,8 @@ urlpatterns = patterns('',
     url(r'^$', views.MobileHome_View.as_view(), name='mobile'),
     url(r'^signIn/', views.MobileSignIn_View.as_view(), name='signin'),
     url(r'^signOut/', views.MobileSignout_View.as_view(), name='signout'),
-    url(r'^stations/', views.MobileStations_View.as_view(), name='teststations'),
+    url(r'^activetests/', views.MobileActive_View.as_view(), name='tests'),
+    url(r'^stations/', views.MobileStationView.as_view(), name='teststations'),
+    url(r'^settings/', views.MobileSettings_View.as_view(), name='settings'),
     )
 
