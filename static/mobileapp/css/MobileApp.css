@@ -48,7 +48,7 @@
 }
 
 html {
-background: url(http://www.wallscorner.com/walls/bose-logo-wide.jpg) no-repeat center center fixed;
+background:url("../images/Bose-Logo.jpg") no-repeat center;
 -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
