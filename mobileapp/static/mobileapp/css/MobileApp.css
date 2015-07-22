@@ -9,7 +9,7 @@
   -moz-border-radius: 90;
   border-radius: 900px;
   font-family: Arial;
-  color: #ffffff;
+  color: #FFFFFF;
   font-size: 50px;
   padding: 30px 40px 30px 40px;
   text-decoration: none;
@@ -48,7 +48,7 @@
 }
 
 html {
-background:url("../images/Bose-Logo.jpg") no-repeat center;
+/*background:url("../images/Bose-Logo.jpg") no-repeat center;*\
 -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;

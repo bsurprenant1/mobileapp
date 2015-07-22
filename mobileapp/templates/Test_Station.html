@@ -1,26 +1,49 @@
-<!DOCTYPE html>
+<!DOCTYPE>
 <html>
 <head lang="en">
 
     <meta charset="UTF-8">
-
+    <h1> {color: white}</h1>
     <title>Test_Station</title>
 
    {%  load staticfiles %}
 	<link rel="stylesheet" href="{% static 'mobileapp/css/MobileApp.css' %}">
+
+
+    <style>
+        h1 {color: white}
+    </style>
 </head>
+<p>
+
+    <div id="back">
+
+        <a class="mybutton" href="http://127.0.0.1:8000/mobileapp/">Back</a>
+        <br/>
+        <br/>
+
+    </div>
+<body>
+
+    <h1>Select the Test Station</h1>
 
 
-<div id="back">
+    {% for station in stations %}
+        <li><a href="../display_tests/?station_id={{ station.name }}">{{ station.name }}</a></li>
+    {% endfor %}
+    </ul>
 
-<a class="mybutton" href="http://127.0.0.1:8000/mobileapp/">Back</a>
-    <br/>
-    <br/>
+</body>
 
-    <h1><b>Select the Test Station</b></h1>
-</div>
-<head>
-<script>
+    <!--form>
+    <select name="test_run" onchange="showStation(this.value)">
+    </select>
+    </form>
+    <br>
+    <div id="txtHint"><b>Info will be here</b></div-->
+
+
+<!--script>
 function showStation(str) {
     if (str == "") {
         document.getElementById("txtHint").innerHTML = "";
@@ -40,23 +63,6 @@ function showStation(str) {
         xmlhttp.send();
     }
 }
-</script>
-</head>
-<body>
+</script-->
 
-<form>
-<select name="test_run" onchange="showStation(this.value)">
-  <option value="">Select a station:</option>
-  <option value="1">Hello_World</option>
-  <option value="2">Hello_people</option>
-  </select>
-</form>
-<br>
-<div id="txtHint"><b>Info will be here</b></div>
-
-</body>
-</html>
-
-
-</body>
 </html>

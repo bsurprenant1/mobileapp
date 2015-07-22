@@ -1,0 +1,40 @@
+{
+tests_stress_testing: [ ],
+tests_power_states: [ ],
+tests_aux: [
+"AuxWithPowerCycle",
+"AuxToDiscoverableWith_BTButton",
+"Button_MFBAtAUXToFD",
+"StandbyIgnoreBlueToothPair",
+"AuxToConnectingState",
+"vol",
+"AuxToDiscoverableWithEmptyList",
+"AuxToDiscoverableWithClearList_BTButton",
+"AuxToStandby",
+"AuxInactiveToStandby",
+"StandbyToAux"
+],
+tests_hfp: [ ],
+tests_ipc: [
+"Venom_HighTemp"
+],
+tests_update_dut: [
+"discoverableToUpdate"
+],
+tests_bt_connectivity: [
+"discoverableWithEmptyPairingList",
+"Bluetooth_List_Clear_to_Discoverable",
+"BTInactivelyToStandby",
+"discoverableWithClearPairingList",
+"Main_ConnectingToDiscoverableWithPHBluetooth",
+"discoverableWithRestartInactivityTimer",
+"Main_ConnectedToConnecting",
+"discoverableToConnecting",
+"StandbyToDiscoverable",
+"StandbyToConnect"
+],
+tests_bt_audio: [
+"audioPlayPause",
+"VolumePersistsPowerCycle"
+]
+}
